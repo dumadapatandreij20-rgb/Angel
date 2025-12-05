@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome, Hermaiah ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --pink-light: #fff0f6;
+      --pink-medium: #ffb6c1;
+      --pink-dark: #ff85a2;
+      --pink-accent: #ff4d8d;
+      --pink-soft: #ffeef5;
+      --gold: #ffd700;
+      --white: #ffffff;
+      --shadow: rgba(255, 105, 180, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--pink-light) 0%, var(--pink-soft) 100%);
+      color: #7a3b5e;
+      font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded MT Bold', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Cute floating cats */
+    .floating-cat {
+      position: fixed;
+      width: 80px;
+      height: 80px;
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.9;
+    }
+
+    .cat1 {
+      top: 10%;
+      left: 5%;
+      animation: floatCat1 20s infinite ease-in-out;
+    }
+
+    .cat2 {
+      bottom: 15%;
+      right: 8%;
+      animation: floatCat2 25s infinite ease-in-out;
+    }
+
+    .floating-hearts {
+      position: fixed;
+      font-size: 2rem;
+      color: var(--pink-accent);
+      animation: floatHearts 4s infinite ease-in-out;
+    }
+
+    .hearts1 {
+      top: 20%;
+      right: 10%;
+      animation-delay: 0.5s;
+    }
+
+    .hearts2 {
+      bottom: 25%;
+      left: 10%;
+      animation-delay: 1s;
+    }
+
+    @keyframes floatCat1 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(20px, -30px) rotate(5deg); }
+      50% { transform: translate(0, -60px) rotate(0deg); }
+      75% { transform: translate(-20px, -30px) rotate(-5deg); }
+    }
+
+    @keyframes floatCat2 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(-30px, -40px) rotate(-8deg); }
+      66% { transform: translate(30px, -20px) rotate(8deg); }
+    }
+
+    @keyframes floatHearts {
+      0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+      50% { transform: translateY(-30px) scale(1.2); opacity: 1; }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 25px;
+      padding: 2.5rem;
+      box-shadow: 0 15px 35px var(--shadow);
+      border: 3px solid var(--pink-medium);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background: var(--pink-accent);
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        padding: 3rem 3.5rem;
+      }
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #d44d8c;
+      text-shadow: 2px 2px 0px var(--pink-light);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #ff85a2, #ff4d8d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1.2rem; }
+    .mb-6 { margin-bottom: 1.8rem; }
+    .mb-8 { margin-bottom: 2.5rem; }
+    .mt-4 { margin-top: 1.2rem; }
+    .mt-6 { margin-top: 1.8rem; }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #d44d8c;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      border: 2px solid var(--pink-medium);
+      border-radius: 15px;
+      padding: 1rem 1.2rem;
+      font-size: 1rem;
+      background: var(--pink-light);
+      color: #7a3b5e;
+      transition: all 0.3s;
+    }
+
+    input[type="password"]:focus {
+      outline: none;
+      border-color: var(--pink-accent);
+      box-shadow: 0 0 0 3px rgba(255, 77, 141, 0.2);
+    }
+
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: linear-gradient(135deg, var(--pink-dark), var(--pink-accent));
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 5px 15px rgba(255, 77, 141, 0.3);
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 77, 141, 0.4);
+    }
+
+    button i {
+      margin-right: 8px;
+    }
+
+    .error {
+      color: #ff3333;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      min-height: 1em;
+    }
+
+    .tag {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--pink-medium), var(--pink-accent));
+      color: white;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+      box-shadow: 0 3px 10px rgba(255, 77, 141, 0.3);
+    }
+
+    .divider {
+      border-top: 2px dashed var(--pink-medium);
+      margin: 2.5rem 0;
+    }
+
+    .letter {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      background: var(--pink-light);
+      padding: 2rem;
+      border-radius: 20px;
+      border-left: 5px solid var(--pink-accent);
+    }
+
+    .letter p + p {
+      margin-top: 1.2rem;
+    }
+
+    .signature {
+      margin-top: 2.5rem;
+      font-size: 1rem;
+      text-align: right;
+    }
+
+    .signature span {
+      display: block;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .nav-btn {
+      background: var(--pink-medium);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: var(--pink-accent);
+      transform: translateY(-2px);
+    }
+
+    .nav-btn.active {
+      background: linear-gradient(135deg, var(--pink-dark), var(--pink-accent));
+    }
+
+    /* Spinning 3D Gallery */
+    .spinning-gallery {
+      width: 300px;
+      height: 300px;
+      margin: 2rem auto;
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .spinner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: spin 20s infinite linear;
+    }
+
+    .spinner:hover {
+      animation-play-state: paused;
+    }
+
+    .spinner img {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      border: 5px solid white;
+      object-fit: cover;
+    }
+
+    .spinner img:nth-child(1) { transform: rotateY(0deg) translateZ(250px); }
+    .spinner img:nth-child(2) { transform: rotateY(60deg) translateZ(250px); }
+    .spinner img:nth-child(3) { transform: rotateY(120deg) translateZ(250px); }
+    .spinner img:nth-child(4) { transform: rotateY(180deg) translateZ(250px); }
+    .spinner img:nth-child(5) { transform: rotateY(240deg) translateZ(250px); }
+    .spinner img:nth-child(6) { transform: rotateY(300deg) translateZ(250px); }
+
+    @keyframes spin {
+      from { transform: rotateY(0); }
+      to { transform: rotateY(360deg); }
+    }
+
+    /* Photo Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .photo-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.2rem;
+      box-shadow: 0 10px 20px var(--shadow);
+      transition: all 0.3s;
+      border: 3px solid var(--pink-medium);
+      height: 100%;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(255, 77, 141, 0.25);
+    }
+
+    .photo-inner {
+      border-radius: 15px;
+      background: var(--pink-light);
+      overflow: hidden;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: var(--pink-accent);
+      border: 2px dashed var(--pink-medium);
+    }
+
+    .photo-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .photo-card:hover .photo-inner img {
+      transform: scale(1.1);
+    }
+
+    .photo-caption {
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #d44d8c;
+      text-align: center;
+      height: 2.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .baptism-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--gold);
+      color: #7a3b5e;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .hint {
+      font-size: 0.85rem;
+      color: var(--pink-accent);
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .baby-name {
+      font-size: 2rem;
+      color: #ff4d8d;
+      font-weight: 700;
+      margin: 1rem 0;
+      text-shadow: 2px 2px 0px #ffb6c1;
+    }
+
+    .hearts {
+      color: var(--pink-accent);
+      font-size: 1.5rem;
+      letter-spacing: 10px;
+    }
+
+    .cute-cat-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 1.5rem 0;
+    }
+
+    .cute-cat {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 3px solid var(--pink-medium);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .cute-cat img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-categories {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    .category-btn {
+      background: var(--pink-light);
+      border: 2px solid var(--pink-medium);
+      color: #d44d8c;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .category-btn:hover {
+      background: var(--pink-medium);
+      color: white;
+    }
+
+    .category-btn.active {
+      background: linear-gradient(135deg, var(--pink-dark), var(--pink-accent));
+      color: white;
+      border-color: var(--pink-accent);
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating cats -->
+  <div class="floating-cat cat1">
+    <img src="https://media.tenor.com/XdQ0z8lf0BkAAAAi/a.gif" alt="Cute cat">
+  </div>
+  
+  <div class="floating-cat cat2">
+    <img src="https://media.tenor.com/QY5HA65fJtMAAAAi/kitten-hearts.gif" alt="Kitten hearts">
+  </div>
+
+  <!-- Floating hearts -->
+  <div class="floating-hearts hearts1">💖💖</div>
+  <div class="floating-hearts hearts2">💕💕</div>
+
+  <div class="container">
+    <!-- Baptism Badge -->
+    <div class="baptism-badge">
+      <i class="fas fa-dove"></i>
+    </div>
+
+    <!-- PASSWORD SCREEN -->
+    <section id="password-screen">
+      <div class="text-center mb-6">
+        <div class="tag mb-4">For Baby Hermaiah ✨</div>
+        <div class="hearts">♥ ♥ ♥</div>
+        <h1 class="mb-2">Welcome</h1>
+        <div class="cute-cat-container">
+          <div class="cute-cat">
+            <img src="https://ik.imagekit.io/12qr74qmxt/images.jpg" alt="Cute cat">
+          </div>
+          <div class="cute-cat">
+            <img src="https://ik.imagekit.io/12qr74qmxt/download%20(5).jpg" alt="Kitten hearts">
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mb-6">
+        <div class="baby-name">Hermaiah Elise<br>Cabillo Dumadapat</div>
+        <p style="font-size:0.95rem; color:#d44d8c;">
+          Our little star is here ✨
+        </p>
+      </div>
+
+      <form id="password-form" autocomplete="off">
+        <div class="mb-4">
+          <label for="password-input"><i class="fas fa-lock"></i> Enter the magic word</label>
+          <input
+            id="password-input"
+            name="password"
+            type="password"
+            placeholder="What's her name?"
+            required
+          />
+          <div class="hint">Hint: Her middle name</div>
+          <div id="error-message" class="error"></div>
+        </div>
+
+        <div class="text-center">
+          <button type="submit">
+            <i class="fas fa-heart"></i> Open Letter
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- LETTER SCREEN -->
+    <section id="letter-screen" style="display:none;" class="fade-in">
+      <div class="text-center mb-6">
+        <div class="tag mb-4">For Hermaiah Elise</div>
+        <h2 class="mb-2">A Love Letter</h2>
+        <div class="cute-cat-container">
+          <div class="cute-cat">
+            <img src="https://media.tenor.com/QY5HA65fJtMAAAAi/kitten-hearts.gif" alt="Kitten hearts">
+          </div>
+        </div>
+      </div>
+
+      <div class="letter">
+        <p>Dearest Baby Hermaiah Elise,</p>
+
+        <p>
+          Today is one of the most beautiful days of your life – your baptism! 
+          As the holy water touches your little forehead, know that you are being 
+          welcomed into God's family with more love than the stars in the sky.
+        </p>
+
+        <p>
+          You came into this world like a soft pink rosebud, delicate and perfect. 
+          Your tiny fingers that wrap around ours, your sweet coos that sound like 
+          angel whispers, and those beautiful eyes that look at the world with 
+          wonder – every part of you is a miracle from Heaven.
+        </p>
+
+        <p>
+          On this blessed day, we promise to guide you in faith, surround you with 
+          love, and help you grow into the amazing person God created you to be. 
+          May you always feel the warmth of His love, the protection of angels, 
+          and the joy of family.
+        </p>
+
+        <p>
+          As you grow, may your heart be as beautiful as your name, your spirit as 
+          bright as your smile, and your life as blessed as this special day. 
+          You are our answered prayer, our greatest blessing, and our little piece 
+          of heaven on earth.
+        </p>
+
+        <p>
+          We love you more than all the pink flowers in all the gardens of the world.
+        </p>
+
+        <div class="signature">
+          <span>With all our love,</span>
+          <span><strong>Your Loving Family & Godparents</strong></span>
+        </div>
+      </div>
+
+      <div class="navigation">
+        <a href="#password" class="nav-btn" onclick="showPasswordScreen()">
+          <i class="fas fa-home"></i> Back
+        </a>
+        <a href="#gallery" class="nav-btn active" onclick="showGallery()">
+          <i class="fas fa-images"></i> Photos
+        </a>
+      </div>
+    </section>
+
+    <!-- GALLERY SCREEN -->
+    <section id="gallery-screen" style="display:none;" class="fade-in">
+      <div class="text-center mb-6">
+        <div class="tag mb-4">Baby's Gallery</div>
+        <h2 class="mb-2">Precious Memories</h2>
+        <p style="font-size:0.95rem; color:#ff4d8d;">
+          Every moment is a treasure 💕
+        </p>
+        <div class="cute-cat-container">
+          <div class="cute-cat">
+            <img src="https://media.tenor.com/XdQ0z8lf0BkAAAAi/a.gif" alt="Cute cat">
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Categories -->
+      <div class="gallery-categories">
+        <button class="category-btn active" onclick="filterGallery('all')">All Memories</button>
+        <button class="category-btn" onclick="filterGallery('baptism')">Baptism Day</button>
+        <button class="category-btn" onclick="filterGallery('family')">Family</button>
+        <button class="category-btn" onclick="filterGallery('sleeping')">Sleeping</button>
+        <button class="category-btn" onclick="filterGallery('smiling')">Smiling</button>
+      </div>
+
+      <!-- Spinning 3D Gallery -->
+      <div class="text-center mb-8">
+        <h3>Spinning Memories</h3>
+        <p class="hint">Hover to pause</p>
+        <div class="spinning-gallery">
+          <div class="spinner">
+            <!-- Replace with your baby's photos -->
+            <img src="https://ik.imagekit.io/ztjtpxgy0/553058552_657352083681308_2079502866937150251_n.jpg">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/588328124_826472890256724_4840000813789987135_n.jpg">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/588390487_1510340173568908_2336689771492524834_n.jpg">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/569164223_829123919609667_2453401613215194673_n.jpg">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/589944068_1881972109076982_370337900945382088_n.jpg">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/591109429_1376217954168073_4439575276633591591_n.jpg">
+          </div>
+        </div>
+        <p class="hint mt-2">Click on images below to replace with your photos!</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3 class="text-center mb-4">Precious Memories Collection</h3>
+      <div class="gallery" id="memories-gallery">
+        <!-- 35+ Image placeholders with categorized Unsplash URLs -->
+        <!-- Replace these src URLs with your baby's actual photos -->
+        
+        <!-- Baptism Day Photos (8 images) -->
+        <div class="photo-card" data-category="baptism">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/12qr74qmxt/591696788_1627790121722147_4185750076245168245_n.jpg" alt="Newborn moment">
+          </div>
+          <div class="photo-caption">Newborn ✨</div>
+        </div>
+        
+        <div class="photo-card" data-category="baptism">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/12qr74qmxt/589614067_737963399336592_1489256376390023492_n%20-%20Copy.jpg" alt="Sleeping Angel">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="baptism">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/588328124_826472890256724_4840000813789987135_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="baptism">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/588390487_1510340173568908_2336689771492524834_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="baptism">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/594001327_855500156841210_3534784673947455260_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="baptism">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/d1d76527-3fa4-4183-a997-0e7639feb7f2.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="baptism">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/1d5df59c-7cf1-4ef9-84a9-2286875f489b.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="baptism">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/bc0b27a4-f601-4326-bda1-a057d8f0f8dc.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <!-- Family Photos (8 images) -->
+        <div class="photo-card" data-category="family">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/589592316_1184192023088788_4283077636950442482_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="family">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/589621447_740711201699900_3048613257210327456_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="family">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/588843743_1380182950446343_4320240626025092735_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="family">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/589490212_721851197110439_1951484163135881014_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="family">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/588328124_826472890256724_4840000813789987135_n%20(1).jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="family">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/589808900_1358146005569396_6820478384738217221_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="family">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/589712139_2321535524966835_2008903491473009989_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="family">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/589712139_2321535524966835_2008903491473009989_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <!-- Sleeping Photos (8 images) -->
+        <div class="photo-card" data-category="sleeping">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/583890653_811214305220006_1524625575226891821_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="sleeping">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/583890653_811214305220006_1524625575226891821_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="sleeping">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/588766858_1392890372218692_1699839033176447605_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="sleeping">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/588207567_1553365989123169_6848075469820574223_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="sleeping">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/574296937_1137899401386525_4754186063324556647_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="sleeping">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/576567377_1473923000352191_5578259491533498532_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="sleeping">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/594001327_855500156841210_3534784673947455260_n.jpg?updatedAt=1764949605077">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="sleeping">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/566376020_1157734099630036_5433464439202881530_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <!-- Smiling Photos (8 images) -->
+        <div class="photo-card" data-category="smiling">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/592144856_1937291896849598_2738152901769042182_n.jpg">
+          </div>
+          <div class="photo-caption">With Ate Kirsi😊</div>
+        </div>
+        
+        <div class="photo-card" data-category="smiling">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/540110481_703409912716331_6531683531154676725_n.jpg">
+          </div>
+          <div class="photo-caption">With Ate Kirsi</div>
+        </div>
+        
+        <div class="photo-card" data-category="smiling">
+          <div class="photo-inner">
+             <img src="https://ik.imagekit.io/ztjtpxgy0/541174777_761189986890692_5642628945191208760_n.jpg">
+          </div>
+          <div class="photo-caption">Nail Cutter With Ate Kirsi&Mommy Van</div>
+        </div>
+        
+        <div class="photo-card" data-category="smiling">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/540485022_1416934892720074_4584119827879931266_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="smiling">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/540973450_1450925465960100_1236837580806011353_n.jpg">
+          </div>
+          <div class="photo-caption">With Ate Kirsi</div>
+        </div>
+        
+        <div class="photo-card" data-category="smiling">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/541272612_3331147410371324_1063766259392523068_n.jpg">
+          </div>
+          <div class="photo-caption">Smiling Ate Kirsi</div>
+        </div>
+        
+        <div class="photo-card" data-category="smiling">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/541248692_1115317020695402_1962673763360541118_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="smiling">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/542520845_787581063747261_4711852256219822430_n.jpg">
+          </div>
+          <div class="photo-caption">With Lola Mata</div>
+        </div>
+        
+        <!-- Milestone Photos (8 images) -->
+        <div class="photo-card" data-category="milestone">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/588865889_9518084361648466_5550869238136021965_n.jpg">
+          </div>
+          <div class="photo-caption"></div>
+        </div>
+        
+        <div class="photo-card" data-category="milestone">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/582339066_662288996821441_1230537868552028219_n.jpg">
+          </div>
+          <div class="photo-caption">With Tata Nikki</div>
+        </div>
+        
+        <div class="photo-card" data-category="milestone">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/581842223_3807354449570342_1716510840329537891_n.jpg">
+          </div>
+          <div class="photo-caption">With Pabo</div>
+        </div>
+        
+        <div class="photo-card" data-category="milestone">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/569778550_1738144483507026_8026432480820047035_n.jpg">
+          </div>
+          <div class="photo-caption">Same Color Shirt With Pabo</div>
+        </div>
+        
+        <div class="photo-card" data-category="milestone">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/569814512_1461681128266467_4049679747688075355_n.jpg">
+          </div>
+          <div class="photo-caption">With My Pretty Mommy</div>
+        </div>
+        
+        <div class="photo-card" data-category="milestone">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/569814512_1461681128266467_4049679747688075355_n.jpg">
+          </div>
+        </div>
+        
+        <div class="photo-card" data-category="milestone">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/553543069_1115288906921392_9122643392175202747_n.jpg">
+          </div>
+        </div>
+        
+        <div class="photo-card" data-category="milestone">
+          <div class="photo-inner">
+            <img src="https://ik.imagekit.io/ztjtpxgy0/565183506_830180112817856_6239369157710473728_n.jpg">
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-6">
+        <p class="hint">Total: 40 precious memory slots ready for your photos!</p>
+      </div>
+
+      <div class="navigation mt-6">
+        <a href="#password" class="nav-btn" onclick="showPasswordScreen()">
+          <i class="fas fa-home"></i> Back
+        </a>
+        <a href="#letter" class="nav-btn" onclick="showLetterScreen()">
+          <i class="fas fa-heart"></i> Letter
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Password configuration
+    const PASSWORD = "Hermaiah";
+
+    // DOM elements
+    const form = document.getElementById("password-form");
+    const input = document.getElementById("password-input");
+    const errorMessage = document.getElementById("error-message");
+    const passwordScreen = document.getElementById("password-screen");
+    const letterScreen = document.getElementById("letter-screen");
+    const galleryScreen = document.getElementById("gallery-screen");
+
+    // Password form submission
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const value = (input.value || "").trim();
+
+      if (value.toLowerCase() === PASSWORD.toLowerCase()) {
+        errorMessage.textContent = "";
+        showLetterScreen();
+        input.value = "";
+        createConfetti();
+        createCatConfetti();
+      } else {
+        errorMessage.textContent = "That's not quite right. Try her First Name!";
+        input.style.borderColor = "#ff3333";
+        setTimeout(() => {
+          input.style.borderColor = "var(--pink-medium)";
+        }, 1000);
+      }
+    });
+
+    // Navigation functions
+    function showPasswordScreen() {
+      passwordScreen.style.display = "block";
+      letterScreen.style.display = "none";
+      galleryScreen.style.display = "none";
+    }
+
+    function showLetterScreen() {
+      passwordScreen.style.display = "none";
+      letterScreen.style.display = "block";
+      galleryScreen.style.display = "none";
+      letterScreen.classList.add("fade-in");
+    }
+
+    function showGallery() {
+      passwordScreen.style.display = "none";
+      letterScreen.style.display = "none";
+      galleryScreen.style.display = "block";
+      galleryScreen.classList.add("fade-in");
+    }
+
+    // Gallery filtering function
+    function filterGallery(category) {
+      const cards = document.querySelectorAll('.photo-card');
+      const buttons = document.querySelectorAll('.category-btn');
+      
+      // Update active button
+      buttons.forEach(btn => {
+        if (btn.textContent.includes(category.charAt(0).toUpperCase() + category.slice(1)) || 
+            (category === 'all' && btn.textContent === 'All Memories')) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      // Filter cards
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'block';
+        } else {
+          if (card.getAttribute('data-category') === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    // Create pink confetti
+    function createConfetti() {
+      const colors = ['#ffb6c1', '#ff85a2', '#ff4d8d', '#ffd700'];
+      for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.position = 'fixed';
+        confetti.style.width = '10px';
+        confetti.style.height = '10px';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.borderRadius = '50%';
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.top = '-20px';
+        confetti.style.zIndex = '9999';
+        confetti.style.pointerEvents = 'none';
+        
+        const animation = confetti.animate([
+          { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+          { transform: `translateY(${window.innerHeight + 20}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+        ], {
+          duration: 2000 + Math.random() * 3000,
+          easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+        });
+        
+        document.body.appendChild(confetti);
+        animation.onfinish = () => confetti.remove();
+      }
+    }
+
+    // Create cat confetti
+    function createCatConfetti() {
+      for (let i = 0; i < 10; i++) {
+        const cat = document.createElement('img');
+        cat.src = Math.random() > 0.5 ? 
+          'https://media.tenor.com/XdQ0z8lf0BkAAAAi/a.gif' : 
+          'https://media.tenor.com/QY5HA65fJtMAAAAi/kitten-hearts.gif';
+        cat.style.position = 'fixed';
+        cat.style.width = '40px';
+        cat.style.height = '40px';
+        cat.style.left = Math.random() * 100 + 'vw';
+        cat.style.top = '-40px';
+        cat.style.zIndex = '9999';
+        cat.style.pointerEvents = 'none';
+        cat.style.borderRadius = '10px';
+        cat.style.boxShadow = '0 3px 10px rgba(0,0,0,0.2)';
+        
+        const animation = cat.animate([
+          { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+          { transform: `translateY(${window.innerHeight + 40}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+        ], {
+          duration: 3000 + Math.random() * 2000,
+          easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+        });
+        
+        document.body.appendChild(cat);
+        animation.onfinish = () => cat.remove();
+      }
+    }
+
+    // Add click functionality to photos for easy replacement
+    document.addEventListener('DOMContentLoaded', function() {
+      const photos = document.querySelectorAll('.photo-inner img');
+      photos.forEach(photo => {
+        photo.style.cursor = 'pointer';
+        photo.addEventListener('click', function() {
+          const newUrl = prompt('Enter new image URL for this photo:', this.src);
+          if (newUrl && newUrl.trim() !== '') {
+            this.src = newUrl.trim();
+          }
+        });
+      });
+
+      // Add meow sound to cats
+      const cats = document.querySelectorAll('.cute-cat img, .floating-cat img');
+      cats.forEach(cat => {
+        cat.style.cursor = 'pointer';
+        cat.addEventListener('click', function() {
+          const meow = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-cat-meow-117.mp3');
+          meow.volume = 0.2;
+          meow.play().catch(e => console.log("Audio play failed (it's okay)"));
+        });
+      });
+    });
+
+    // Instructions for adding photos
+    console.log(`How to add your baby's photos:
+    1. Click on any photo in the gallery to replace it
+    2. Enter the URL of your baby's photo when prompted
+    3. Photos are organized into categories:
+       - Baptism Day (8 photos)
+       - Family (8 photos)
+       - Sleeping (8 photos)
+       - Smiling (8 photos)
+       - Milestones (8 photos)
+    
+    Total: 40 photo slots ready for your precious memories!`);
+  </script>
+</body>
+
+</html>
+
+
+
+
+
